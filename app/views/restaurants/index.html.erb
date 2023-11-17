@@ -1,0 +1,14 @@
+<h1>Restaurants</h1>
+
+<ul>
+  <div class="d-flex justify-content-between p-4">
+    <% @restaurants.each do |restaurant| %>
+      <p class="m-4 p-3 border border-1 rounded text-center">
+      <%= link_to restaurant.name, restaurant_path(restaurant), class:"text-dark text-decoration-none fw-bold d-flex justify-content-center" %>
+      <%= restaurant.address %>
+      <%= restaurant.category %>
+      <%= restaurant.phone_number %>
+      </p>
+    <% end %>
+  </div>
+</ul>
